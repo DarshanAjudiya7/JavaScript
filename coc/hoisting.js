@@ -15,9 +15,11 @@ function addone(num){
     return num + 1
 }
 
-addtwo(2)
 
 const addtwo = function(number){
     number + 2
 }
+
+addtwo(2)
+
 
