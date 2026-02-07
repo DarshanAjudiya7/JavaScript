@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyboard Check</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 350px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .box {
+      background: #fff;
+      color: #333;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 6px;
+      font-size: 18px;
+    }
+
+    .label {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .value {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Keyboard Check</h1>
+    <p>Press any key on your keyboard</p>
+
+    <div class="box">
+      <div class="label">Key</div>
+      <div class="value" id="key">-</div>
+    </div>
+
+    <div class="box">
+      <div class="label">Key Code</div>
+      <div class="value" id="keyCode">-</div>
+    </div>
+
+    <div class="box">
+      <div class="label">Code</div>
+      <div class="value" id="code">-</div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("keydown", (event) => {
+      document.getElementById("key").textContent =
+        event.key === " " ? "Space" : event.key;
+
+      document.getElementById("keyCode").textContent = event.keyCode;
+      document.getElementById("code").textContent = event.code;
+    });
+  </script>
+
+</body>
+</html>

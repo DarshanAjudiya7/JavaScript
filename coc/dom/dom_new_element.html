@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: white; padding: 20px; font-size: 50px;">
+    <div class="parent">   
+        <div class="day">mon</div>
+        <div class="day">tues</div>
+        <div class="day">wed</div>
+        <div class="day">thurs</div>
+        <div class="day">fri</div>
+    </div>
+</body>
+<script>
+const parentDiv = document.querySelector('.parent');
+console.log(parentDiv);
+console.log(parentDiv.children); // HTMLCollection of child elements
+console.log(parentDiv.children[1].innerText); // "tues"
+
+// for (let i = 0; i < parentDiv.children.length; i++) {
+//     const element = parentDiv.children[i].innerHTML;
+//     console.log(element);
+// }
+parentDiv.children[2].style.backgroundColor = 'red'; // Change background of "wed"
+// console.log(parent.firstElementChild); // First child element
+// console.log(parent.lastElementChild); // Last child element
+// const dayone = document.querySelector('.day');
+// console.log(dayone); // "tues"
+// console.log(dayone,parentElement); // "tues" and parent element
+// console.log(dayone.nextElementSibling); // "wed"
+
+console.log('nodes', parentDiv.childNodes); // NodeList of all child nodes (including text nodes)
+</script>
+</html>

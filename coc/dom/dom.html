@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black {
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+        .heading {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .text {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+
+        <h1 id="title" class="heading">DOM learning from scratch<span style="display:none"> sample text</span></h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+        <h2>Lorem ipsum dolor sit consectetur adipisicing.</h2>
+        <h2>Lorem ipsum dolor amet consectetur adipisicing.</h2>
+        <input type="password" value="password123" id="myInput">
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+        <p class="text">Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+    </div>
+    
+</body>
+</html>
+
+<!-- document.getElementById("title")
+document.getElementById("title").id
+document.getElementById("title").className
+document.getElementById("title").getAttribute("class")
+document.getElementById("title").setAttribute("class","heading text-center")// overwrite class
+document.getElementById('title').style.borderRadius= "40px"  -->
+<!-- document.querySelector("h1");
+document.querySelectorAll("h1");
+document.querySelector('input[type="password"]');  -->
+
+<!-- document.querySelector('ul')
+const x = document.querySelector('ul')
+x.querySelector('li')
+const abc = x.querySelector('li')
+abc.style.backgroundColor='red'
+abc.innerText='five'
+const bvm = document.querySelectorAll('li') // map is not available on nodelist, but in the array it is available. -->
+<!-- bvm[0].style.backgroundColor = 'green' -->
+
+<!-- document.getElementsByClassName('list-item')
+const templist = document.getElementsByClassName('list-item')
+templist.forEach(function(ki){
+  console.log('hello')
+}) // error because forEach is not available in HTMLCollection. -->
+<!--
+Array.from(templist)
+const arr = Array.from(templist)
+arr.forEach(function(li){
+  li.style.color='blue'
+}) // now it works because we converted HTMLCollection to array. All elements are now blue in color. --> 
+
+
+<!-- console.dir(document); -> This command is used in the browser's developer console to display an interactive list of the properties of the specified JavaScript object, in this case, the 'document' object representing the DOM of the webpage. -->
+<!-- console.log(window); -> This command logs the 'window' object to the console, which represents the browser window and provides access to global variables and functions.     -->
+<!-- console.log(window.document); -> This command logs the 'document' object, which is a property of the 'window' object, to the console. It represents the entire HTML document loaded in the browser and allows interaction with the content and structure of the webpage.    -->
+<!-- The 'document' object is a property of the 'window' object, which represents the browser window. Therefore, 'window.document' and 'document' refer to the same object. -->
+<!-- console.log(document.baseURI); // Logs the base URI of the document
+The baseURI property of the document object returns the absolute base URI of the document. This is useful for resolving relative URLs within the document. -->
+<!-- console.log(document.links[index]); // Logs all the links in the document
+The links property of the document object returns a collection of all the <a> and <area> elements in the document that have an href attribute. This allows you to easily access and manipulate all the links on a webpage.
+document.getElementById("myElement"),innerHTML = "<h3>Hello, World!</h3>";  -->
